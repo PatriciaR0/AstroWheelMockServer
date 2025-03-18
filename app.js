@@ -43,48 +43,44 @@ app.get("/api/Inventory", (req, res, next) => {
 app.get("/api/HighScore", (req, res, next) => {
     res.json([
         {
-            "characterId": 1,
+            "characterName": "Betti",
             "totalScore": 95
         },
         {
-            "characterId": 2,
+            "characterName": "Zsófi",
             "totalScore": 120
         },
         {
-            "characterId": 3,
+            "characterName": "Patti",
             "totalScore": 85
         },
         {
-            "characterId": 4,
+            "characterName": "Player1",
             "totalScore": 150
         },
         {
-            "characterId": 5,
+            "characterName": "Player2",
             "totalScore": 110
         },
         {
-            "characterId": 6,
+            "characterName": "Player3",
             "totalScore": 75
         },
         {
-            "characterId": 7,
+            "characterName": "Player4",
             "totalScore": 130
         },
         {
-            "characterId": 8,
+            "characterName": "Player5",
             "totalScore": 90
         },
         {
-            "characterId": 9,
+            "characterName": "Player6",
             "totalScore": 140
         },
         {
-            "characterId": 10,
+            "characterName": "Player7",
             "totalScore": 100
-        },
-        {
-            "characterId": 11,
-            "totalScore": 80
         },
     ]);
 });
@@ -108,7 +104,7 @@ app.get("/api/players/me", (req, res, next) => {
             "totalScore": 1,
             "lastLogin": null,
             "createdAt": "2025-03-12T14:07:50.251241",
-            "characterName": "mérleg",
+            "characterName": "Capricorn",
             "islandName": null,
         }
     );
