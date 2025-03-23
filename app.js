@@ -16,6 +16,13 @@ app.use(cors(corsOptions));
 
 app.use(express.json()); // Middleware to parse JSON requests
 
+app.get("/api/Auth/login", (req, res, next) => {
+    res.json({
+        "email":"patricia@gmail.com",
+        "password": "HarryP123+"
+    });
+});
+
 app.get("/api/Characters", (req, res, next) => {
     res.json({
         "CharacterID": 1,
@@ -106,6 +113,15 @@ app.get("/api/players/me", (req, res, next) => {
             "createdAt": "2025-03-12T14:07:50.251241",
             "characterName": "Capricorn",
             "islandName": null,
+            "materials": [
+                {
+                    "materialId": 1,
+                    "witchName": "Dragon's Claw",
+                    "englishName": "Coral-root",
+                    "latinName": "Corallorhiza odontorrhiza",
+                    "quantity": 4
+                }
+            ]
         }
     );
 });
