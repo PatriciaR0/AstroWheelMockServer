@@ -115,7 +115,7 @@ app.get("/api/players/me", (req, res, next) => {
             "islandName": null,
             "materials": [
                 {
-                    "materialId": 1,
+                    "materialId": 12,
                     "witchName": "Dragon's Claw",
                     "englishName": "Coral-root",
                     "latinName": "Corallorhiza odontorrhiza",
