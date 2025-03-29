@@ -16,19 +16,17 @@ app.use(cors(corsOptions));
 
 app.use(express.json()); // Middleware to parse JSON requests
 
-app.get("/api/Auth/login", (req, res, next) => {
-    res.json({
-        "email":"patricia@gmail.com",
-        "password": "HarryP123+"
-    });
+app.post("/api/Auth/login", (req, res, next) => {
+    console.log(req)
+    res.json({ "token": "validMockTocken" });
 });
 
-app.get("/api/Characters", (req, res, next) => {
+app.get("/api/characters/1", (req, res, next) => {
     res.json({
-        "CharacterID": 1,
-        "AstroSign": "Leo",
-        "Gender": "Male",
-        "CharacterIndex": 1,
+        "characterId": 1,
+        "astroSign": "Leo",
+        "gender": "Male",
+        "characterIndex": 1,
     });
 });
 
@@ -121,7 +119,8 @@ app.get("/api/players/me", (req, res, next) => {
                     "latinName": "Corallorhiza odontorrhiza",
                     "quantity": 4
                 }
-            ]
+
+            ],
         }
     );
 });
