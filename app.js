@@ -17,8 +17,10 @@ app.use(cors(corsOptions));
 app.use(express.json()); // Middleware to parse JSON requests
 
 app.post("/api/Auth/login", (req, res, next) => {
-    console.log(req)
-    res.json({ "token": "validMockTocken" });
+    if (req.body.password === "errorTest") {
+        return res.status(401).json({ error: "Invalid email or password!" });
+    }
+    return res.json({ "token": "validMockTocken" });
 });
 
 app.get("/api/characters/1", (req, res, next) => {
@@ -26,7 +28,7 @@ app.get("/api/characters/1", (req, res, next) => {
         "characterId": 1,
         "astroSign": "Leo",
         "gender": "Male",
-        "characterIndex": 1,
+        "characterIndex": 1,git 
     });
 });
 
