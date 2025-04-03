@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = 3005;
 
 // Define CORS options
 const corsOptions = {
@@ -28,7 +28,7 @@ app.get("/api/characters/1", (req, res, next) => {
         "characterId": 1,
         "astroSign": "Leo",
         "gender": "Male",
-        "characterIndex": 1,git 
+        "characterIndex": 1,
     });
 });
 
