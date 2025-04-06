@@ -23,7 +23,7 @@ app.post("/api/Auth/login", (req, res, next) => {
     return res.json({ "token": "validMockTocken" });
 });
 
-app.get("/api/characters/1", (req, res, next) => {
+app.get("/api/character/1", (req, res, next) => {
     res.json({
         "characterId": 1,
         "astroSign": "Leo",
@@ -32,62 +32,13 @@ app.get("/api/characters/1", (req, res, next) => {
     });
 });
 
-app.get("/api/Inventory", (req, res, next) => {
-    res.json(
-        [
-            {
-                "inventoryId": 1,
-                "totalScore": 1,
-            },
-            {
-                "inventoryId": 2,
-                "totalScore": 1,
-            }
-        ]
-    );
-});
-
-app.get("/api/HighScore", (req, res, next) => {
+app.get("/api/inventory", (req, res, next) => {
     res.json([
         {
-            "characterName": "Betti",
-            "totalScore": 95
-        },
-        {
-            "characterName": "Zsófi",
-            "totalScore": 120
-        },
-        {
-            "characterName": "Patti",
-            "totalScore": 85
-        },
-        {
-            "characterName": "Player1",
-            "totalScore": 150
-        },
-        {
-            "characterName": "Player2",
-            "totalScore": 110
-        },
-        {
-            "characterName": "Player3",
-            "totalScore": 75
-        },
-        {
-            "characterName": "Player4",
-            "totalScore": 130
-        },
-        {
-            "characterName": "Player5",
-            "totalScore": 90
-        },
-        {
-            "characterName": "Player6",
-            "totalScore": 140
-        },
-        {
-            "characterName": "Player7",
-            "totalScore": 100
+            "inventoryId": 2,
+            "totalScore": 400,
+            "playerId": 2,
+            "playerName": "Pati"
         },
     ]);
 });
