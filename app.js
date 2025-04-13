@@ -20,10 +20,10 @@ app.post("/api/Auth/login", (req, res, next) => {
     if (req.body.password === "errorTest") {
         return res.status(401).json({ error: "Invalid email or password!" });
     }
-    return res.json({ "token": "validMockTocken" });
+    return res.json({ "token": "validMockToken" });
 });
 
-app.get("/api/character/1", (req, res, next) => {
+app.get("/api/character/:characterId", (req, res, next) => {
     res.json({
         "characterId": 1,
         "astroSign": "Leo",
